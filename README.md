@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site](https://motlakz.github.io/collections-component/)
+- Live Site URL: [Collections Template](https://motlakz.github.io/collections-template/)
 
 ### Built with
 
