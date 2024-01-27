@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    font-family: 'Lexend Deca', 'monospace', sans-serif;
+}
+
+.container {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 10px;
+}
+
+.animate__bounceInLeft {
+    animation-delay: 1.2s;
+}
+
+h1 {
+    text-transform: uppercase;
+    background-image: linear-gradient(to right top, rgb(166, 87, 163), orchid, deeppink, red, pink);
+    background-size: 50% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: rgba(70, 64, 68, 0.4) 3px 3.5px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .card {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        border-radius: 2px;
+        transition: all 1s ease;
+
+        &:hover {
+            figure img {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .card1:hover {
+        background-color: yellow;
+
+        figure img {
+            border: 2px solid yellow;
+        }
+    }
+
+    .card2:hover {
+        background-color: skyblue;
+
+        figure img {
+            border: 2px solid skyblue;
+        }
+    }
+
+    .card3:hover {
+        background-color: lightgreen;
+
+        figure img {
+            border: 2px solid lightgreen;
+        }
+    }
+
+    .card4:hover {
+        background-color: pink;
+
+        figure img {
+            border: 2px solid pink;
+        }
+    }
+}
+
+figure img {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    object-fit: cover;
+    transition: all .5s ease-in;
+    max-width: 180px;
+}
+
+article {
+    max-width: 180px;
+    width: 100%;
+}
+
+button {
+    transition: all .5s ease-in-out;
+
+    &.save {
+        border: 2px double blueviolet;
+        font-size: 20px;
+        border-radius: 8px;
+        background-color: red;
+        color: aliceblue;
+        max-width: 150px;
+        width: 100%;
+
+        &:hover {
+            background-color: aliceblue;
+            border: 2px double red;
+            color: blueviolet;
+        }
+    }
+
+    &.close {
+        text-shadow: 1px 1px 1px #000;
+    }
+}
+
+footer button {
+    box-shadow: rgba(70, 64, 68, 0.4) 5px 5px, rgba(134, 50, 104, 0.3) 10px 10px;
+    width: 100%;
+    max-width: 230px;
+
+    &:hover {
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px;
+    }
+}
+
+@media (width <= 500px) {
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        figure img {
+            max-width: 100%;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+
+        button {
+            width: 100%;
+            max-width: unset !important;
+        }
+    }
+}
