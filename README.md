@@ -31,4 +31,3 @@ Users should be able to:
 
 - GitHub - [@Motlakz](https://www.github.com/Motlakz)
 - Twitter - [@MotlalepulaSel6](https://www.twitter.com/MotlalepulaSel6)
-- 
