@@ -10,7 +10,7 @@
 
 ## Overview
 
-### The challenge
+### The product
 
 Users should be able to:
 
