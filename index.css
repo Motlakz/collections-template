@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
+:root {
+    --font-family: 'Lexend Deca', 'monospace', sans-serif;
+    --box-shadow-light: rgba(60, 64, 67, 0.15);
+    --box-shadow-dark: rgba(60, 64, 67, 0.3);
+    --gradient-colors: rgb(32, 58, 184), rgb(207, 4, 200), rgb(163, 17, 207), rgb(201, 5, 5), rgb(168, 125, 132);
+    --transition-speed: 1s;
+    --border-radius: 2px;
+    --hover-scale: 0.9;
+    --box-shadow-hover: rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    --button-width: 230px;
+}
+
 body {
-    font-family: 'Lexend Deca', 'monospace', sans-serif;
+    font-family: var(--font-family);
 }
 
 .container {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: var(--box-shadow-dark) 0px 1px 2px 0px, var(--box-shadow-light) 0px 1px 3px 1px;
     margin: 10px;
 }
 
@@ -15,7 +27,7 @@ body {
 
 h1 {
     text-transform: uppercase;
-    background-image: linear-gradient(to right top, rgb(166, 87, 163), orchid, deeppink, red, pink);
+    background-image: linear-gradient(to right top, var(--gradient-colors));
     background-size: 50% auto;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,13 +40,13 @@ h1 {
     gap: 15px;
 
     .card {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        border-radius: 2px;
-        transition: all 1s ease;
+        box-shadow: var(--box-shadow-dark) 0px 4px 6px -1px, var(--box-shadow-light) 0px 2px 4px -1px;
+        border-radius: var(--border-radius);
+        transition: all var(--transition-speed) ease;
 
         &:hover {
             figure img {
-                transform: scale(0.9);
+                transform: scale(var(--hover-scale));
             }
         }
     }
@@ -73,9 +85,9 @@ h1 {
 }
 
 figure img {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: var(--box-shadow-hover);
     object-fit: cover;
-    transition: all .5s ease-in;
+    transition: all var(--transition-speed) ease-in;
     max-width: 180px;
 }
 
@@ -85,20 +97,20 @@ article {
 }
 
 button {
-    transition: all .5s ease-in-out;
+    transition: all var(--transition-speed) ease-in-out;
 
     &.save {
         border: 2px double blueviolet;
         font-size: 20px;
         border-radius: 8px;
-        background-color: red;
+        background-color: maroon;
         color: aliceblue;
         max-width: 150px;
         width: 100%;
 
         &:hover {
             background-color: aliceblue;
-            border: 2px double red;
+            border: 2px double maroon;
             color: blueviolet;
         }
     }
@@ -109,9 +121,9 @@ button {
 }
 
 footer button {
-    box-shadow: rgba(70, 64, 68, 0.4) 5px 5px, rgba(134, 50, 104, 0.3) 10px 10px;
+    box-shadow: var(--box-shadow-dark) 5px 5px, var(--box-shadow-light) 10px 10px;
     width: 100%;
-    max-width: 230px;
+    max-width: var(--button-width);
 
     &:hover {
         box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px;
