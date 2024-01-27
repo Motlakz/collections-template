@@ -133,11 +133,15 @@ footer button {
 @media (width <= 500px) {
     .card {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 20px;
 
         figure img {
             max-width: 100%;
+        }
+
+        article {
+            text-align: center;
         }
     }
 
